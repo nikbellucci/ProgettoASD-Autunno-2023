@@ -119,4 +119,5 @@ fabric.properties
 ProgettoASD-Autunno-2023.iml
 *.txt
 !icarus.txt
+!dipendenti.txt
 # End of https://www.toptal.com/developers/gitignore/api/intellij
