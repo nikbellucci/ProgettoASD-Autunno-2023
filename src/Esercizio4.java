@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 public class Esercizio4 {
 
     public static String FILENAME;
+    public static double[][] weights;
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("Usage: java BellmanFordAbilene <input_file>");
@@ -40,7 +41,6 @@ public class Esercizio4 {
         for (int i = 0; i < nodes.size(); i++) {
             calculateBellmanFord(nodes.size(), nodes.get(i).getUniqueId(), links);
         }
-
 
     }
 
@@ -78,6 +78,7 @@ public class Esercizio4 {
 
         return nodes;
     }
+
     public static ArrayList<Link> extractLinks(String fileName) {
         ArrayList<Link> links = new ArrayList<>();
         Pattern linkPattern = Pattern.compile("(\\w+) \\( (\\w+) (\\w+) \\) (\\d+\\.\\d+) (\\d+\\.\\d+) (\\d+\\.\\d+) (\\d+\\.\\d+) \\( (.+?) \\)");
@@ -258,7 +259,7 @@ class Link {
     private String source;
     private String destination;
     private double preInstalledCapacity;
-    private  double weight;
+    private double weight;
 
     public Link(String id, String source, String destination, double preInstalledCapacity) {
         this.id = id;
